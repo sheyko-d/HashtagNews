@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:amazon="http://schemas.amazon.com/apk/res/android"
     package="com.moysof.hashtagnews"
-    android:versionCode="18"
-    android:versionName="1.11" >
+    android:versionCode="25"
+    android:versionName="2.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
