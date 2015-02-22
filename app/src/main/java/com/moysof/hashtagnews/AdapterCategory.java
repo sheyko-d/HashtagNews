@@ -1,4 +1,4 @@
-// Ryan's first commit test
+// So you changed some file
 
 package com.moysof.hashtagnews;
 
