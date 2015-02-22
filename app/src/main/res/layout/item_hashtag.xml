@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <com.moysof.hashtagnews.TextLight
+        android:id="@+id/hashtagChar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="#"
+        android:textColor="#999"
+        android:textSize="18sp" />
+
+    <com.moysof.hashtagnews.TextLight
+        android:id="@+id/hashtagTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:paddingBottom="10dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:textColor="#777"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#e8e8e8" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="14dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/delete" />
+
+</LinearLayout>

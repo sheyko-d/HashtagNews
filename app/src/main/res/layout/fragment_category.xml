@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/categoryGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:onClick="hidePopup"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popup"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="48dp"
+            android:paddingTop="13dp" >
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/categoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#categories"
+                android:textColor="@color/orange"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/categoryAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="home"
+                android:textColor="#777"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="add category"
+                android:textColor="#777"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/categoryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="#support"
+                android:textColor="@color/orange"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="settings"
+                android:textColor="#777"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="help"
+                android:textColor="#777"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="feedback"
+                android:textColor="#777"
+                android:textSize="23sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="log out"
+                android:textColor="#777"
+                android:textSize="23sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.moysof.hashtagnews.TextLight
+        android:id="@+id/emptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No posts found"
+        android:textAllCaps="true"
+        android:textColor="#888"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/categoryProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+</FrameLayout>

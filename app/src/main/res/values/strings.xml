@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hashtag News</string>
+    <string name="app_id">1504071646477469</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="title_activity_register">#Register</string>
+    <string name="title_activity_login">#Login</string>
+    <string name="title_activity_menu">#News</string>
+    <string name="title_activity_menu_delete">#Delete item</string>
+    <string name="title_activity_settings">#Settings</string>
+    <string name="title_activity_category_add">#Add category</string>
+    <string name="title_activity_category_edit">#Edit category</string>
+    <string name="copyright">" © 2014 HashtagNews"</string>
+    <string name="other">Other...</string>
+
+</resources>

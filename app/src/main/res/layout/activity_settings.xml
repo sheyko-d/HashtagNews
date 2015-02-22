@@ -1,0 +1,396 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/gray" >
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- ———————————————————————————— -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/orange_light_bg"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <com.moysof.hashtagnews.TextBold
+                        android:id="@+id/TextView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#news sources"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:id="@+id/textView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Twitter"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/switcherTwitter"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:clickable="true"
+                            android:onClick="switchTwitter"
+                            android:src="@drawable/switch_on" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Instagram"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/switcherInstagram"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:clickable="true"
+                            android:onClick="switchInstagram"
+                            android:src="@drawable/switch_on" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ———————————————————————————— -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/orange_light_bg"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <com.moysof.hashtagnews.TextBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#settings"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Shade Previously Seen Posts"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/switcherShade"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:clickable="true"
+                            android:onClick="switchShade"
+                            android:src="@drawable/switch_on" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Show Near Me Category"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/switcherLocation"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:clickable="true"
+                            android:onClick="switchLocation"
+                            android:src="@drawable/switch_on" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ———————————————————————————— -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/orange_light_bg"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <com.moysof.hashtagnews.TextBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#information"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:id="@+id/TextView03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Name"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <com.moysof.hashtagnews.TextLightItalic
+                            android:id="@+id/settingsNameText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Email"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <com.moysof.hashtagnews.TextLightItalic
+                            android:id="@+id/settingsEmailText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="#fff"
+                            android:textSize="20sp" >
+
+                            <requestFocus />
+                        </com.moysof.hashtagnews.TextLightItalic>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Username"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <com.moysof.hashtagnews.TextLightItalic
+                            android:id="@+id/settingsLoginText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp" >
+
+                        <com.moysof.hashtagnews.TextLight
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:singleLine="true"
+                            android:text="Password"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <com.moysof.hashtagnews.TextLightItalic
+                                android:id="@+id/TextView04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:singleLine="true"
+                                android:text="******"
+                                android:textColor="#fff"
+                                android:textSize="20sp" />
+
+                            <com.moysof.hashtagnews.TextBold
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/clickable"
+                                android:clickable="true"
+                                android:onClick="openPasswordDialog"
+                                android:padding="8dp"
+                                android:text="edit"
+                                android:textColor="#fff"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.moysof.hashtagnews.TextItalic
+                android:id="@+id/settingsAboutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/orange"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />
+
+</LinearLayout>

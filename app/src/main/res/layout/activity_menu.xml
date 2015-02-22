@@ -1,0 +1,203 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/mytoolbar"
+                layout="@layout/toolbar" />
+
+            <FrameLayout
+                android:id="@+id/mainUndoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/refreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <GridView
+                        android:id="@+id/menuGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:divider="@android:color/transparent"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="17dp"
+                        android:paddingRight="17dp"
+                        android:paddingTop="12dp"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:verticalSpacing="12dp" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:id="@+id/undoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/undo_bg_patch"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:id="@+id/undoTitleTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.9"
+                            android:text="Category deleted"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/undoDescTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.6"
+                            android:paddingBottom="2dp"
+                            android:text="You can enable it back in settings"
+                            android:textColor="@android:color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:alpha="0.6"
+                        android:background="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:onClick="undo"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="8dp" >
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="11dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_undo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:alpha="0.6"
+                            android:gravity="center_vertical"
+                            android:text="Undo"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="addCategory"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_empty" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_horizontal"
+                android:text="No categories yet"
+                android:textColor="#AAA"
+                android:textSize="22sp" />
+
+            <com.moysof.hashtagnews.TextLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Click here to add a category"
+                android:textColor="#AAA"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.moysof.hashtagnews.ScrimInsetsFrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        app:insetForeground="#20000000" >
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#f0f0f0"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/clickable_menu" />
+
+    </com.moysof.hashtagnews.ScrimInsetsFrameLayout>
+
+</android.support.v4.widget.DrawerLayout>

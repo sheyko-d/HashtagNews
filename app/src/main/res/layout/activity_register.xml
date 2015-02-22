@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin_small" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <EditText
+                android:id="@+id/registerLoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="Username"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:textSize="16sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/registerPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:textSize="16sp" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/registerRepeatPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="Password Again"
+                android:inputType="textPassword"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:textSize="16sp" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/registerEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:textSize="16sp" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/registerNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="Your Name"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:textSize="16sp" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.moysof.hashtagnews.ButtonMedium
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_weight="0"
+        android:background="@drawable/button"
+        android:onClick="register"
+        android:paddingBottom="2dp"
+        android:text="Create"
+        android:textColor="@color/btn"
+        android:textSize="16sp" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />
+
+</LinearLayout>

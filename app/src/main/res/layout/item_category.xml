@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true" >
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/categoryBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:elevation="0.5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:stateListAnimator="@anim/raise_card"
+        card_view:cardCornerRadius="2dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <com.moysof.hashtagnews.RoundedImageView
+                    android:id="@+id/categoryAvatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="8dp"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.moysof.hashtagnews.TextMedium
+                        android:id="@+id/categoryAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:includeFontPadding="false"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.moysof.hashtagnews.TextRegular
+                        android:id="@+id/categoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:textColor="#555"
+                        android:textColorLink="#555"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/categoryImageBlock"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/placeholder" />
+
+                <ImageView
+                    android:id="@+id/categoryImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:id="@+id/categoryImageClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="57dp"
+                android:background="@android:drawable/divider_horizontal_bright" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="49dp" >
+
+                    <com.moysof.hashtagnews.TextLight
+                        android:id="@+id/categoryDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_twitter"
+                        android:drawablePadding="4dp"
+                        android:includeFontPadding="false"
+                        android:padding="8dp"
+                        android:textColor="#AAA"
+                        android:textSize="13sp" />
+
+                    <com.moysof.hashtagnews.TextLight
+                        android:id="@+id/categoryFavorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_favorites"
+                        android:drawablePadding="4dp"
+                        android:includeFontPadding="false"
+                        android:padding="8dp"
+                        android:textColor="#AAA"
+                        android:textSize="13sp" />
+
+                    <com.moysof.hashtagnews.TextLight
+                        android:id="@+id/categoryLikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_likes"
+                        android:drawablePadding="4dp"
+                        android:includeFontPadding="false"
+                        android:padding="8dp"
+                        android:textColor="#AAA"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/categoryShareImg"
+                    android:layout_width="44dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_share" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/seenView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000"
+            android:visibility="gone" />
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
