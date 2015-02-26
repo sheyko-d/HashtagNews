@@ -1,16 +1,14 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class AdapterShareMain extends BaseAdapter {
 
@@ -34,7 +32,7 @@ public class AdapterShareMain extends BaseAdapter {
 		iconsArrayList.add(R.drawable.ic_facebook);
 		if (twitterInstalled) {
 			titlesArrayList.add("Twitter");
-			iconsArrayList.add(R.drawable.ic_twitter);
+			iconsArrayList.add(R.drawable.ic_twitter_2);
 		}
 		titlesArrayList.add("Google+");
 		iconsArrayList.add(R.drawable.ic_google);

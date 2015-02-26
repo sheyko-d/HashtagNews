@@ -28,9 +28,7 @@
             <com.moysof.hashtagnews.PagerSlidingTabStrip
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="48dip"
-                android:clipToPadding="true"
-                android:paddingLeft="60dp" />
+                android:layout_height="48dip" />
         </LinearLayout>
 
         <android.support.v4.view.ViewPager
@@ -44,6 +42,7 @@
             xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             ads:adSize="SMART_BANNER"
             ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />

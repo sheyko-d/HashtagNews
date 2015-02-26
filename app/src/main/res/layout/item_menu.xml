@@ -94,7 +94,7 @@
                     android:layout_gravity="center"
                     android:includeFontPadding="false"
                     android:textColor="#AAA"
-                    android:textSize="22sp" />
+                    android:textSize="26.5sp" />
 
                 <com.moysof.hashtagnews.TextCondensedBold
                     android:layout_width="wrap_content"

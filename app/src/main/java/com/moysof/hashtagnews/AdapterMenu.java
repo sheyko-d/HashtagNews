@@ -1,10 +1,5 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,7 +7,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.GradientDrawable;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,6 +15,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
 
 public class AdapterMenu extends BaseAdapter {
 
@@ -79,15 +78,9 @@ public class AdapterMenu extends BaseAdapter {
 		} else {
 			try {
 				if (Integer.parseInt(counters.get(position)) < 100) {
-					if (counters.get(position).length() > 1) {
-						((TextView) itemView.findViewById(R.id.counterText))
-								.setTextSize(TypedValue.COMPLEX_UNIT_SP, 34);
-					}
 					((TextView) itemView.findViewById(R.id.counterText))
 							.setText(counters.get(position));
 				} else {
-					((TextView) itemView.findViewById(R.id.counterText))
-							.setTextSize(TypedValue.COMPLEX_UNIT_SP, 27);
 					((TextView) itemView.findViewById(R.id.counterText))
 							.setText("100+");
 				}
