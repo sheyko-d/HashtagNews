@@ -1,3 +1,5 @@
+// So you changed some file
+
 package com.moysof.hashtagnews;
 
 import android.app.AlertDialog;
