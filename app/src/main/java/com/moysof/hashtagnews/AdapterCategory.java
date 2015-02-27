@@ -162,7 +162,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
         holder.mCategoryBg.setOnClickListener(
                 shareClickListener);
 
-        holder.mCategoryAuthor.setText("("+ids.get(position)+") "+authors
+        holder.mCategoryAuthor.setText(authors
                 .get(position));
         holder.mCategoryAuthor
                 .setTextColor(Color.parseColor(color));
