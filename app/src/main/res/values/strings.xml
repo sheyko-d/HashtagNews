@@ -7,13 +7,13 @@
     <string name="action_settings">Settings</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
-    <string name="title_activity_register">#Register</string>
-    <string name="title_activity_login">#Login</string>
-    <string name="title_activity_menu">#News</string>
-    <string name="title_activity_menu_delete">#Delete item</string>
-    <string name="title_activity_settings">#Settings</string>
-    <string name="title_activity_category_add">#Add category</string>
-    <string name="title_activity_category_edit">#Edit category</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_menu">HashtagNews</string>
+    <string name="title_activity_menu_delete">Delete Item</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_category_add">Add Category</string>
+    <string name="title_activity_category_edit">Edit Category</string>
     <string name="copyright">" © 2015 HashtagNews"</string>
     <string name="other">Other...</string>
 
