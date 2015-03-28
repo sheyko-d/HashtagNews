@@ -37,7 +37,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends ActionBarActivity {
 
-    private String loginUrl = "http://hashtagnews.net/app/login.php";
+    private String loginUrl = "http://www.moyersoftware.com/hashtagnews/app/login.php";
     private EditText loginLoginEditText;
     private EditText loginPasswordEditText;
 
@@ -229,10 +229,10 @@ public class LoginActivity extends ActionBarActivity {
                 Toast.makeText(LoginActivity.this, "Unknown error",
                         Toast.LENGTH_LONG).show();
             } else if (errorCode == 1) {
-                Toast.makeText(LoginActivity.this, "Some fileds are empty",
+                Toast.makeText(LoginActivity.this, "Some fields are empty",
                         Toast.LENGTH_LONG).show();
             } else if (errorCode == 2) {
-                Toast.makeText(LoginActivity.this, "User allready exists",
+                Toast.makeText(LoginActivity.this, "User already exists",
                         Toast.LENGTH_LONG).show();
             } else if (errorCode == 3) {
                 Toast.makeText(LoginActivity.this, "Incorrect password",

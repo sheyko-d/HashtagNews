@@ -73,7 +73,7 @@ public class MenuActivity extends ActionBarActivity {
     private ArrayList<String> lastIdsInstagram = new ArrayList<String>();
     private ArrayList<String> lastIdsTwitter = new ArrayList<String>();
     private ArrayList<String> lastTimes = new ArrayList<String>();
-    private String countersUrl = "http://hashtagnews.net/app/counters.php";
+    private String countersUrl = "http://www.moyersoftware.com/hashtagnews/app/counters.php";
     private AdapterMenu adapter;
     private SharedPreferences preferences;
     private DrawerLayout mDrawerLayout;
@@ -451,7 +451,7 @@ public class MenuActivity extends ActionBarActivity {
                             } else if (position == 7) {
                                 startActivity(new Intent(
                                         Intent.ACTION_VIEW,
-                                        Uri.parse("http://www.hashtagnews.net/support.php")));
+                                        Uri.parse("http://www.moyersoftware.com/hashtagnews/support.php")));
                             } else if (position == 8) {
                                 String appPackageName = getPackageName();
                                 if (BaseApplication.isAmazonPhone()) {

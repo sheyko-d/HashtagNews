@@ -205,7 +205,7 @@ public class MenuDeleteActivity extends ActionBarActivity {
 							} else if (position == 7) {
 								startActivity(new Intent(
 										Intent.ACTION_VIEW,
-										Uri.parse("http://www.hashtagnews.net/support.php")));
+										Uri.parse("http://www.moyersoftware.com/hashtagnews/support.php")));
 							} else if (position == 8) {
 								String appPackageName = getPackageName();
 								if (BaseApplication.isAmazonPhone()) {

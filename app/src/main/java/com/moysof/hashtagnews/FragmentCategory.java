@@ -51,7 +51,7 @@ public class FragmentCategory extends DialogFragment {
     String lastTime = "0";
 
     int position = 0;
-    private String searchUrl = "http://hashtagnews.net/app/search.php";
+    private String searchUrl = "http://www.moyersoftware.com/hashtagnews/app/search.php";
     private View root;
     private RecyclerView mCategoryRecycler;
     private ArrayList<String> ids = new ArrayList<String>();

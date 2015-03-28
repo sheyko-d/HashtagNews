@@ -47,7 +47,7 @@ public class RegisterActivity extends ActionBarActivity {
 	private EditText registerRepeatPasswordEditText;
 	private EditText registerEmailEditText;
 	private EditText registerNameEditText;
-	private String registerUrl = "http://hashtagnews.net/app/register.php";
+	private String registerUrl = "http://www.moyersoftware.com/hashtagnews/app/register.php";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
