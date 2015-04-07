@@ -1,7 +1,5 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class AdapterHashtags extends BaseAdapter {
 
@@ -66,7 +66,7 @@ public class AdapterHashtags extends BaseAdapter {
 								CategoryAddActivity.hashtagsList
 										.setVisibility(View.VISIBLE);
 								CategoryAddActivity
-										.setListViewHeightBasedOnChildren(CategoryEditActivity.hashtagsList);
+										.setListViewHeightBasedOnChildren(CategoryAddActivity.hashtagsList);
 							} else if (CategoryEditActivity.hashtagsList != null) {
 								CategoryEditActivity.hashtagsList
 										.setVisibility(View.VISIBLE);

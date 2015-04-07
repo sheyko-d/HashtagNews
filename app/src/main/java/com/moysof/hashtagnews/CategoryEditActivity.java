@@ -1,11 +1,5 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-import java.util.Locale;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -38,6 +32,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class CategoryEditActivity extends ActionBarActivity {
 
@@ -227,6 +227,12 @@ public class CategoryEditActivity extends ActionBarActivity {
 		finish();
 	}
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        hashtagsList = null;
+    }
+
 	public void addHashtag(View v) {
 		String hashtag = ((EditText) findViewById(R.id.categoryHashtags))
 				.getText().toString().replaceAll("#", "").replaceAll(" ", "")
@@ -238,7 +244,7 @@ public class CategoryEditActivity extends ActionBarActivity {
 					.getText().toString().replaceAll("#", "")
 					.replaceAll(" ", "").toLowerCase(Locale.getDefault()));
 			hashtagAdapter.notifyDataSetChanged();
-			findViewById(R.id.hashtagsLayout).setVisibility(View.VISIBLE);
+			findViewById(R.id.hashtagsList).setVisibility(View.VISIBLE);
 			((EditText) findViewById(R.id.categoryHashtags)).setText("");
 			InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 			imm.hideSoftInputFromWindow(
