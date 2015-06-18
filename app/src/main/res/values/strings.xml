@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Hashtag News</string>
+    <string name="app_name">#hashed</string>
     <string name="app_id">1504071646477469</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -9,12 +9,12 @@
     <string name="login">Login</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_login">Login</string>
-    <string name="title_activity_menu">HashtagNews</string>
+    <string name="title_activity_menu">#hashed</string>
     <string name="title_activity_menu_delete">Delete Item</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_category_add">Add Category</string>
     <string name="title_activity_category_edit">Edit Category</string>
-    <string name="copyright">" © 2015 HashtagNews"</string>
+    <string name="copyright">" © 2015 MoyerSoftware"</string>
     <string name="other">Other...</string>
 
 </resources>

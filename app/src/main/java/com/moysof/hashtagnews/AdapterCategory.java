@@ -356,7 +356,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
 						/*Builder builder = new PlusShare.Builder(
 								CategoryActivity.activity);
 						builder.setType("text/plain");
-						builder.setText("Found this in HashtagNews app, check it out!");
+						builder.setText("Found this in #hashed app, check it out!");
 						builder.setContentUrl(Uri.parse(links.get(postPosition)));
 						context.startActivity(Intent.createChooser(
 								builder.getIntent(), "Share"));*/
@@ -419,7 +419,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
                                                                 .get(postPosition)
                                                                 + "\n\n"
                                                                 + links.get(postPosition)
-                                                                + "\n\nShared via HashtagNews app for Android");
+                                                                + "\n\nShared via #hashed app for Android");
                                         shareIntent.setPackage(packageName);
                                         context.startActivity(shareIntent);
                                     }
@@ -562,7 +562,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
 
     private void publish(String text, String author, String link, String picture) {
         Bundle params = new Bundle();
-        params.putString("name", "Found this in HashtagNews app");
+        params.putString("name", "Found this in the #hashed app");
         params.putString("caption", "News at the speed of #");
         params.putString("description", "\"" + text + "\" - " + author);
         params.putString("link", link);

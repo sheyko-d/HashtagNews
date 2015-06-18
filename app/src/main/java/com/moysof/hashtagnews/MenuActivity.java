@@ -237,9 +237,9 @@ public class MenuActivity extends ActionBarActivity {
             launchCount = launchCount + 1;
             if (launchCount >= 15) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Rate HashtagNews");
+                builder.setTitle("Rate #hashed");
                 builder.setCancelable(false);
-                builder.setMessage("If you enjoy using HashtagNews, please take a moment to rate the app. Thank you for your support!");
+                builder.setMessage("If you enjoy using #hashed, please take a moment to rate the app. Thank you for your support!");
                 builder.setPositiveButton("Rate", new OnClickListener() {
 
                     @Override
@@ -451,7 +451,7 @@ public class MenuActivity extends ActionBarActivity {
                             } else if (position == 7) {
                                 startActivity(new Intent(
                                         Intent.ACTION_VIEW,
-                                        Uri.parse("http://www.moyersoftware.com/hashtagnews.php#contact")));
+                                        Uri.parse("http://www.moyersoftware.com/hashed.php#tf-contact")));
                             } else if (position == 8) {
                                 String appPackageName = getPackageName();
                                 if (BaseApplication.isAmazonPhone()) {

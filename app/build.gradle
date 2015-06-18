@@ -7,8 +7,8 @@ android {
         applicationId "com.moysof.hashtagnews"
         minSdkVersion 13
         targetSdkVersion 21
-        versionCode 32
-        versionName '2.1.03'
+        versionCode 33
+        versionName '3.0.00'
     }
     buildTypes {
         release {

@@ -233,7 +233,7 @@ public class CategoryAddActivity extends ActionBarActivity {
                                 finish();
                             } else if (position == 7) {
                                 startActivity(new Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("http://www.hashtagnews.net")));
+                                        Uri.parse("http://www.moyersoftware.com/hashed.php")));
                             } else if (position == 8) {
                                 String appPackageName = getPackageName();
                                 if (BaseApplication.isAmazonPhone()) {

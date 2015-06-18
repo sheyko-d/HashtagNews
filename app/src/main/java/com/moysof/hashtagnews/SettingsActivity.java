@@ -54,7 +54,7 @@ public class SettingsActivity extends ActionBarActivity {
 	private EditText passwordOld;
 	private EditText passwordRepeat;
 	private EditText passwordNew;
-	private String changePasswordUrl = "http://hashtagnews.net/app/change_password.php";
+	private String changePasswordUrl = "http://www.moyersoftware.com/hashtagnews/app/change_password.php";
 	private ImageView switcherLocation;
 	private ImageView switcherShade;
 
@@ -291,10 +291,10 @@ public class SettingsActivity extends ActionBarActivity {
 				Toast.makeText(SettingsActivity.this, "Unknown error",
 						Toast.LENGTH_LONG).show();
 			} else if (errorCode == 1) {
-				Toast.makeText(SettingsActivity.this, "Some fileds are empty",
+				Toast.makeText(SettingsActivity.this, "Some fields are empty",
 						Toast.LENGTH_LONG).show();
 			} else if (errorCode == 2) {
-				Toast.makeText(SettingsActivity.this, "User allready exists",
+				Toast.makeText(SettingsActivity.this, "User already exists",
 						Toast.LENGTH_LONG).show();
 			} else if (errorCode == 3) {
 				Toast.makeText(SettingsActivity.this, "Incorrect old password",
