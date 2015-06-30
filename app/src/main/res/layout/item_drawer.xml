@@ -14,7 +14,7 @@
         android:layout_height="24dp"
         android:contentDescription="@null" />
 
-    <com.moysof.hashtagnews.TextMedium
+    <com.moysof.hashtagnews.typeface.TextMedium
         android:id="@+id/drawerTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

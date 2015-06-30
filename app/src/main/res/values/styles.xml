@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@android:color/white</item>
@@ -8,11 +8,6 @@
 
     <style name="AppTheme" parent="AppBaseTheme" />
 
-    <style name="AppThemeNoActionBar" parent="AppBaseTheme">
-        <item name="windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
-
-    <style name="AppThemeNoActionBar.TransluentStatusBar" parent="AppThemeNoActionBar" />
+    <style name="AppThemeNoActionBar.TransluentStatusBar" parent="AppBaseTheme" />
 
 </resources>

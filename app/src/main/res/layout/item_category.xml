@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp" >
 
-                <com.moysof.hashtagnews.RoundedImageView
+                <com.moysof.hashtagnews.view.RoundedImageView
                     android:id="@+id/categoryAvatar"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                    <com.moysof.hashtagnews.TextMedium
+                    <com.moysof.hashtagnews.typeface.TextMedium
                         android:id="@+id/categoryAuthor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <com.moysof.hashtagnews.TextRegular
+                    <com.moysof.hashtagnews.typeface.TextRegular
                         android:id="@+id/categoryText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="49dp" >
 
-                    <com.moysof.hashtagnews.TextLight
+                    <com.moysof.hashtagnews.typeface.TextLight
                         android:id="@+id/categoryDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                         android:textColor="#AAA"
                         android:textSize="13sp" />
 
-                    <com.moysof.hashtagnews.TextLight
+                    <com.moysof.hashtagnews.typeface.TextLight
                         android:id="@+id/categoryFavorites"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                         android:textColor="#AAA"
                         android:textSize="13sp" />
 
-                    <com.moysof.hashtagnews.TextLight
+                    <com.moysof.hashtagnews.typeface.TextLight
                         android:id="@+id/categoryLikes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

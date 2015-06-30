@@ -28,7 +28,7 @@
             android:layout_weight="1"
             android:orientation="vertical" >
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/titleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:textColor="#555"
                 android:textSize="22sp" />
 
-            <com.moysof.hashtagnews.FlowLayout
+            <com.moysof.hashtagnews.view.flowlayout.FlowLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:f="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/hashtagsLayout"
@@ -53,7 +53,7 @@
                 f:layoutDirection="ltr"
                 f:weightDefault="1.0" >
 
-                <com.moysof.hashtagnews.TextMedium
+                <com.moysof.hashtagnews.typeface.TextMedium
                     android:id="@+id/locationHashtag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                     android:text="MY LOCATION"
                     android:textColor="#fff"
                     android:textSize="10sp" />
-            </com.moysof.hashtagnews.FlowLayout>
+            </com.moysof.hashtagnews.view.flowlayout.FlowLayout>
         </LinearLayout>
 
         <FrameLayout
@@ -87,7 +87,7 @@
                 android:orientation="vertical"
                 android:visibility="gone" >
 
-                <com.moysof.hashtagnews.TextCondensedBold
+                <com.moysof.hashtagnews.typeface.TextCondensedBold
                     android:id="@+id/counterText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                     android:textColor="#AAA"
                     android:textSize="26.5sp" />
 
-                <com.moysof.hashtagnews.TextCondensedBold
+                <com.moysof.hashtagnews.typeface.TextCondensedBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -29,6 +29,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.moysof.hashtagnews.adapter.AdapterCategory;
+import com.moysof.hashtagnews.util.Util;
+import com.moysof.hashtagnews.util.DBHelper;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -135,7 +139,7 @@ public class FragmentCategory extends DialogFragment {
 
     @SuppressLint("NewApi")
     private void changeColor(int newColor) {
-        if (CommonUtilities.isLollipop()) {
+        if (Util.isLollipop()) {
             float[] hsv = new float[3];
             Color.colorToHSV(newColor, hsv);
             hsv[2] *= 0.8f; // value component

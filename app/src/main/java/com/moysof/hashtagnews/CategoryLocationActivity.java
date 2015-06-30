@@ -1,10 +1,5 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.app.FragmentTransaction;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -15,7 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -39,8 +34,14 @@ import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.moysof.hashtagnews.util.DBHelper;
 
-public class CategoryLocationActivity extends ActionBarActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+
+public class CategoryLocationActivity extends AppCompatActivity {
 
 	private ActionBar actionBar;
 	private ArrayList<String> hashtags = new ArrayList<String>();
@@ -61,8 +62,6 @@ public class CategoryLocationActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_category_location);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-		toolbar.setContentInsetsAbsolute(
-				CommonUtilities.convertDpToPixel(72, this), 0);
 		setSupportActionBar(toolbar);
 		
 		getSupportActionBar().setDisplayShowHomeEnabled(false);

@@ -66,7 +66,7 @@
                     android:contentDescription="@null"
                     android:src="@drawable/ic_empty" />
 
-                <com.moysof.hashtagnews.TextLight
+                <com.moysof.hashtagnews.typeface.TextLight
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -76,7 +76,7 @@
                     android:textColor="#AAA"
                     android:textSize="22sp" />
 
-                <com.moysof.hashtagnews.TextLight
+                <com.moysof.hashtagnews.typeface.TextLight
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -88,7 +88,7 @@
         </FrameLayout>
     </LinearLayout>
 
-    <com.moysof.hashtagnews.ScrimInsetsFrameLayout
+    <com.moysof.hashtagnews.view.ScrimInsetsFrameLayout
         android:id="@+id/navigation_drawer"
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -108,6 +108,6 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             android:listSelector="@drawable/clickable_menu" />
-    </com.moysof.hashtagnews.ScrimInsetsFrameLayout>
+    </com.moysof.hashtagnews.view.ScrimInsetsFrameLayout>
 
 </android.support.v4.widget.DrawerLayout>

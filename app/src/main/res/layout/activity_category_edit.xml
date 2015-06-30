@@ -22,7 +22,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin" >
 
-            <com.moysof.hashtagnews.TextMedium
+            <com.moysof.hashtagnews.typeface.TextMedium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -43,7 +43,7 @@
                 <requestFocus />
             </EditText>
 
-            <com.moysof.hashtagnews.TextMedium
+            <com.moysof.hashtagnews.typeface.TextMedium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -65,7 +65,7 @@
                 android:onClick="pickColor"
                 card_view:cardCornerRadius="2dp" />
 
-            <com.moysof.hashtagnews.TextMedium
+            <com.moysof.hashtagnews.typeface.TextMedium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -93,7 +93,7 @@
                     android:textSize="16sp" >
                 </EditText>
 
-                <com.moysof.hashtagnews.ButtonMedium
+                <com.moysof.hashtagnews.typeface.ButtonMedium
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"

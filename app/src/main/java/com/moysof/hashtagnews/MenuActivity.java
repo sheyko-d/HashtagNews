@@ -23,8 +23,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -45,7 +45,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.moysof.hashtagnews.adapter.AdapterDrawer;
+import com.moysof.hashtagnews.adapter.AdapterMenu;
+import com.moysof.hashtagnews.util.DBHelper;
+import com.moysof.hashtagnews.util.Util;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -62,7 +69,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MenuActivity extends ActionBarActivity {
+public class MenuActivity extends AppCompatActivity {
 
     private GridView menuGrid;
     private ArrayList<String> ids = new ArrayList<String>();
@@ -103,8 +110,6 @@ public class MenuActivity extends ActionBarActivity {
         setContentView(R.layout.activity_menu);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-        toolbar.setContentInsetsAbsolute(
-                CommonUtilities.convertDpToPixel(72, this), 0);
         setSupportActionBar(toolbar);
 
         overridePendingTransition(0, 0);
@@ -129,6 +134,18 @@ public class MenuActivity extends ActionBarActivity {
                 .getString("name", ""));
         ((TextView) headerView.findViewById(R.id.drawerEmailTxt))
                 .setText(mPrefs.getString("email", ""));
+
+
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder().cacheInMemory(true)
+                .cacheOnDisk(true)
+                .displayer(new FadeInBitmapDisplayer(250, true, false, false))
+                .showImageOnLoading(android.R.color.white)
+                .build();
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+                this).defaultDisplayImageOptions(defaultOptions).build();
+        ImageLoader.getInstance().init(config);
+
+        Util.Log("avatar = "+mPrefs.getString("avatar", ""));
 
         if (mPrefs.getString("avatar", "").equals("")) {
             ((ImageView) headerView.findViewById(R.id.drawerAvatarImg))

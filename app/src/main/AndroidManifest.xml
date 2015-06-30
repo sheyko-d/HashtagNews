@@ -3,7 +3,7 @@
     xmlns:amazon="http://schemas.amazon.com/apk/res/android"
     package="com.moysof.hashtagnews"
     android:versionCode="25"
-    android:versionName="2.0" >
+    android:versionName="2.0">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -26,15 +26,22 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user's Google account
+    from an app. -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
     <application
         android:name="com.moysof.hashtagnews.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.moysof.hashtagnews.LauncherActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,66 +50,42 @@
         </activity>
         <activity
             android:name="com.moysof.hashtagnews.SplashActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppThemeNoActionBar" >
-        </activity>
-        <activity
-            android:name="com.moysof.hashtagnews.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:theme="@style/AppThemeNoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity
-            android:name="com.moysof.hashtagnews.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppThemeNoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name="com.moysof.hashtagnews.MenuActivity"
             android:icon="@drawable/icon_transparent"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppThemeNoActionBar.TransluentStatusBar" >
-        </activity>
+            android:theme="@style/AppThemeNoActionBar.TransluentStatusBar" />
         <activity
             android:name="com.moysof.hashtagnews.MenuDeleteActivity"
             android:icon="@drawable/icon_transparent"
             android:label="@string/title_activity_menu_delete"
-            android:theme="@style/AppThemeNoActionBar.TransluentStatusBar" >
-        </activity>
+            android:theme="@style/AppThemeNoActionBar.TransluentStatusBar" />
         <activity
             android:name="com.moysof.hashtagnews.CategoryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:icon="@drawable/icon_transparent"
-            android:theme="@style/AppThemeNoActionBar" >
-        </activity>
+            android:icon="@drawable/icon_transparent" />
         <activity
             android:name="com.moysof.hashtagnews.CategoryEditActivity"
             android:icon="@drawable/icon_transparent"
             android:label="@string/title_activity_category_edit"
-            android:theme="@style/AppThemeNoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.moysof.hashtagnews.SettingsActivity"
             android:icon="@drawable/icon_transparent"
-            android:label="@string/title_activity_settings" >
-        </activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name="com.moysof.hashtagnews.CategoryAddActivity"
             android:configChanges="screenSize|orientation"
             android:icon="@drawable/icon_transparent"
             android:label="@string/title_activity_category_add"
             android:theme="@style/AppThemeNoActionBar.TransluentStatusBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.moysof.hashtagnews.CategoryLocationActivity"
             android:icon="@drawable/icon_transparent"
             android:label="@string/title_activity_category_edit"
-            android:theme="@style/AppThemeNoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
@@ -123,9 +106,13 @@
             android:value="@string/app_id" />
 
         <activity
-            android:name="com.facebook.LoginActivity"
-            android:label="@string/app_name"
+            android:name="com.facebook.FacebookActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider968706989842324"
+            android:exported="true" />
     </application>
 
 </manifest>

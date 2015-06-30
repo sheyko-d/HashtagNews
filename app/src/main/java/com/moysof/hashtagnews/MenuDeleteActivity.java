@@ -1,7 +1,5 @@
 package com.moysof.hashtagnews;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -13,8 +11,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,9 +26,15 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.moysof.hashtagnews.adapter.AdapterDrawer;
+import com.moysof.hashtagnews.adapter.AdapterMenuDelete;
+import com.moysof.hashtagnews.util.DBHelper;
+import com.moysof.hashtagnews.util.Util;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class MenuDeleteActivity extends ActionBarActivity {
+import java.util.ArrayList;
+
+public class MenuDeleteActivity extends AppCompatActivity {
 
 	private ListView menuList;
 	private ArrayList<String> ids = new ArrayList<String>();
@@ -59,8 +63,6 @@ public class MenuDeleteActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_menu_delete);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-		toolbar.setContentInsetsAbsolute(
-				CommonUtilities.convertDpToPixel(72, this), 0);
 		setSupportActionBar(toolbar);
 
 		getSupportActionBar().setElevation(0f);

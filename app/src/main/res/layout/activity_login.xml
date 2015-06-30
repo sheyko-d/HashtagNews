@@ -51,7 +51,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.moysof.hashtagnews.ButtonMedium
+    <com.moysof.hashtagnews.typeface.ButtonMedium
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="48dp"

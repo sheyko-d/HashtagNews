@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal" >
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/titleText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

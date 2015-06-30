@@ -38,7 +38,7 @@
             android:paddingRight="48dp"
             android:paddingTop="13dp" >
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/categoryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 android:textColor="@color/orange"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/categoryAuthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 android:textColor="#777"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/TextView02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:textColor="#777"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/categoryDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:textColor="@color/orange"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/TextView05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:textColor="#777"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/TextView04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                 android:textColor="#777"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/TextView03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                 android:textColor="#777"
                 android:textSize="23sp" />
 
-            <com.moysof.hashtagnews.TextLight
+            <com.moysof.hashtagnews.typeface.TextLight
                 android:id="@+id/TextView06"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.moysof.hashtagnews.TextLight
+    <com.moysof.hashtagnews.typeface.TextLight
         android:id="@+id/emptyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

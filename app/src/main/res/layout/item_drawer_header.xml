@@ -24,7 +24,7 @@
             android:layout_marginTop="16dp"
             android:layout_weight="1" >
 
-            <com.moysof.hashtagnews.RoundedImageView
+            <com.moysof.hashtagnews.view.RoundedImageView
                 android:id="@+id/drawerAvatarImg"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical" >
 
-                <com.moysof.hashtagnews.TextMedium
+                <com.moysof.hashtagnews.typeface.TextMedium
                     android:id="@+id/drawerNameTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     android:textColor="?android:attr/textColorPrimaryInverse"
                     android:textSize="14sp" />
 
-                <com.moysof.hashtagnews.TextRegular
+                <com.moysof.hashtagnews.typeface.TextRegular
                     android:id="@+id/drawerEmailTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

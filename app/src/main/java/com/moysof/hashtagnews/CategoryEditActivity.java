@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -32,6 +33,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.moysof.hashtagnews.adapter.AdapterColors;
+import com.moysof.hashtagnews.adapter.AdapterHashtags;
+import com.moysof.hashtagnews.util.Util;
+import com.moysof.hashtagnews.util.DBHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,7 +44,7 @@ import org.json.JSONException;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class CategoryEditActivity extends ActionBarActivity {
+public class CategoryEditActivity extends AppCompatActivity {
 
 	private String color = "#F44336";
 	private ActionBar actionBar;
@@ -57,8 +62,6 @@ public class CategoryEditActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_category_edit);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-		toolbar.setContentInsetsAbsolute(
-				CommonUtilities.convertDpToPixel(72, this), 0);
 		setSupportActionBar(toolbar);
 
 		actionBar = getSupportActionBar();

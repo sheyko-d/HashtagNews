@@ -28,7 +28,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin" >
 
-                <com.moysof.hashtagnews.TextMedium
+                <com.moysof.hashtagnews.typeface.TextMedium
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -49,7 +49,7 @@
                     <requestFocus />
                 </EditText>
 
-                <com.moysof.hashtagnews.TextMedium
+                <com.moysof.hashtagnews.typeface.TextMedium
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -71,7 +71,7 @@
                     android:onClick="pickColor"
                     card_view:cardCornerRadius="2dp" />
 
-                <com.moysof.hashtagnews.TextMedium
+                <com.moysof.hashtagnews.typeface.TextMedium
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -99,7 +99,7 @@
                         android:textSize="16sp" >
                     </EditText>
 
-                    <com.moysof.hashtagnews.ButtonMedium
+                    <com.moysof.hashtagnews.typeface.ButtonMedium
                         android:id="@+id/button1"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
@@ -133,7 +133,7 @@
             ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />
     </LinearLayout>
 
-    <com.moysof.hashtagnews.ScrimInsetsFrameLayout
+    <com.moysof.hashtagnews.view.ScrimInsetsFrameLayout
         android:id="@+id/navigation_drawer"
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -153,6 +153,6 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             android:listSelector="@drawable/clickable_menu" />
-    </com.moysof.hashtagnews.ScrimInsetsFrameLayout>
+    </com.moysof.hashtagnews.view.ScrimInsetsFrameLayout>
 
 </android.support.v4.widget.DrawerLayout>

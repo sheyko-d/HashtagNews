@@ -1,35 +1,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray" >
+    android:background="@color/gray">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.design.widget.AppBarLayout
             android:id="@+id/tabsWrapper"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="4dp"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/mytoolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                layout="@layout/toolbar"
                 android:elevation="0dp"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-            <com.moysof.hashtagnews.PagerSlidingTabStrip
+            <android.support.design.widget.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="48dip" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/tab_text"
+                app:tabMode="scrollable"
+                android:paddingLeft="44dp"
+                android:clipToPadding="false"
+                app:tabPaddingStart="16dp"
+                app:tabPaddingEnd="16dp"
+                app:tabSelectedTextColor="@color/tab_selected_text" />
+        </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
@@ -38,12 +42,11 @@
             android:layout_weight="1"
             tools:context=".MainActivity" />
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_width="match_parent"
-            android:visibility="gone"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             ads:adSize="SMART_BANNER"
             ads:adUnitId="ca-app-pub-1761468736156699/7354433167" />
     </LinearLayout>
@@ -55,8 +58,7 @@
         android:layout_gravity="center"
         android:background="#ee000000"
         android:scaleType="fitCenter"
-        android:visibility="gone" >
-    </uk.co.senab.photoview.PhotoView>
+        android:visibility="gone"></uk.co.senab.photoview.PhotoView>
 
     <ProgressBar
         android:id="@+id/imageProgressBar"

@@ -5,7 +5,7 @@
     android:layout_gravity="fill_horizontal"
     android:orientation="vertical" >
 
-    <com.moysof.hashtagnews.TextLightItalic
+    <com.moysof.hashtagnews.typeface.TextLightItalic
         android:id="@+id/actionBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

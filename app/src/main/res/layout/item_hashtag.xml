@@ -5,7 +5,7 @@
     android:background="#ffffff"
     android:orientation="horizontal" >
 
-    <com.moysof.hashtagnews.TextLight
+    <com.moysof.hashtagnews.typeface.TextLight
         android:id="@+id/hashtagChar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         android:textColor="#999"
         android:textSize="18sp" />
 
-    <com.moysof.hashtagnews.TextLight
+    <com.moysof.hashtagnews.typeface.TextLight
         android:id="@+id/hashtagTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -30,7 +30,7 @@
                     android:orientation="vertical"
                     android:padding="8dp" >
 
-                    <com.moysof.hashtagnews.TextBold
+                    <com.moysof.hashtagnews.typeface.TextBold
                         android:id="@+id/TextView01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="12dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:id="@+id/textView1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="8dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -110,7 +110,7 @@
                     android:orientation="vertical"
                     android:padding="8dp" >
 
-                    <com.moysof.hashtagnews.TextBold
+                    <com.moysof.hashtagnews.typeface.TextBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="#settings"
@@ -132,7 +132,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="8dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -166,7 +166,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="8dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -195,7 +195,7 @@
                     android:orientation="vertical"
                     android:padding="8dp" >
 
-                    <com.moysof.hashtagnews.TextBold
+                    <com.moysof.hashtagnews.typeface.TextBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="#information"
@@ -210,7 +210,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="12dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:id="@+id/TextView03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
-                        <com.moysof.hashtagnews.TextLightItalic
+                        <com.moysof.hashtagnews.typeface.TextLightItalic
                             android:id="@+id/settingsNameText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -248,7 +248,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="8dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -258,7 +258,7 @@
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
-                        <com.moysof.hashtagnews.TextLightItalic
+                        <com.moysof.hashtagnews.typeface.TextLightItalic
                             android:id="@+id/settingsEmailText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -273,7 +273,7 @@
                             android:textSize="20sp" >
 
                             <requestFocus />
-                        </com.moysof.hashtagnews.TextLightItalic>
+                        </com.moysof.hashtagnews.typeface.TextLightItalic>
                     </LinearLayout>
 
                     <View
@@ -291,7 +291,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginTop="8dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -301,7 +301,7 @@
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
-                        <com.moysof.hashtagnews.TextLightItalic
+                        <com.moysof.hashtagnews.typeface.TextLightItalic
                             android:id="@+id/settingsLoginText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -325,7 +325,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp" >
 
-                        <com.moysof.hashtagnews.TextLight
+                        <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -342,7 +342,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1" >
 
-                            <com.moysof.hashtagnews.TextLightItalic
+                            <com.moysof.hashtagnews.typeface.TextLightItalic
                                 android:id="@+id/TextView04"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -356,7 +356,7 @@
                                 android:textColor="#fff"
                                 android:textSize="20sp" />
 
-                            <com.moysof.hashtagnews.TextBold
+                            <com.moysof.hashtagnews.typeface.TextBold
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -372,7 +372,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.moysof.hashtagnews.TextItalic
+            <com.moysof.hashtagnews.typeface.TextItalic
                 android:id="@+id/settingsAboutText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

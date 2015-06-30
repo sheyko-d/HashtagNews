@@ -15,8 +15,8 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -41,6 +41,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.moysof.hashtagnews.adapter.AdapterColors;
+import com.moysof.hashtagnews.adapter.AdapterDrawer;
+import com.moysof.hashtagnews.adapter.AdapterHashtags;
+import com.moysof.hashtagnews.util.DBHelper;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import org.json.JSONArray;
@@ -48,7 +52,7 @@ import org.json.JSONArray;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class CategoryAddActivity extends ActionBarActivity {
+public class CategoryAddActivity extends AppCompatActivity {
 
     private String color = "#F44336";
     private ActionBar actionBar;
@@ -70,8 +74,6 @@ public class CategoryAddActivity extends ActionBarActivity {
         setContentView(R.layout.activity_category_add);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-        toolbar.setContentInsetsAbsolute(
-                CommonUtilities.convertDpToPixel(72, this), 0);
         setSupportActionBar(toolbar);
 
         overridePendingTransition(0, 0);
@@ -314,7 +316,7 @@ public class CategoryAddActivity extends ActionBarActivity {
     }
 
     public void hidePopup(View v) {
-        findViewById(R.id.popup).setVisibility(View.GONE);
+        //findViewById(R.id.popup).setVisibility(View.GONE);
     }
 
     public static void Log(Object text) {

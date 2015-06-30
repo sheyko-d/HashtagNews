@@ -23,5 +23,10 @@
     <color name="black_transparent_pressed">#33000000</color>
     
     <color name="background_tab_pressed">#1AFFFFFF</color>
+    <color name="tab_text">#AAFFFFFF</color>
+    <color name="tab_selected_text">#FFFFFF</color>
+
+    <color name="btn_facebook">#415dae</color>
+    <color name="btn_google">#dd4b39</color>
 
 </resources>

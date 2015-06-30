@@ -9,7 +9,6 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
@@ -17,11 +16,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -31,15 +31,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.Session;
+import com.facebook.FacebookSdk;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.moysof.hashtagnews.util.DBHelper;
+import com.moysof.hashtagnews.util.Util;
 
 import java.util.ArrayList;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-public class CategoryActivity extends ActionBarActivity {
+public class CategoryActivity extends AppCompatActivity {
 
     private android.support.v4.view.ViewPager pager;
     private MyPagerAdapter adapter;
@@ -57,7 +59,7 @@ public class CategoryActivity extends ActionBarActivity {
     public static View imageProgressBar;
     public static PhotoViewAttacher mAttacher;
     public static ImageView fullScreenImage;
-    public static PagerSlidingTabStrip tabs;
+    public static TabLayout tabs;
     private final static Handler handler = new Handler();
     public static ActionBar actionBar;
 
@@ -67,14 +69,13 @@ public class CategoryActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(this);
 
         setContentView(R.layout.activity_category);
 
         activity = this;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.mytoolbar);
-        toolbar.setContentInsetsAbsolute(
-                CommonUtilities.convertDpToPixel(72, this), 0);
         setSupportActionBar(toolbar);
 
         actionBar = getSupportActionBar();
@@ -131,47 +132,30 @@ public class CategoryActivity extends ActionBarActivity {
         c.close();
         db.close();
 
-        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        tabs = (TabLayout) findViewById(R.id.tabs);
         pager = (android.support.v4.view.ViewPager) findViewById(R.id.pager);
         adapter = new MyPagerAdapter(getSupportFragmentManager());
-
-        Log(getIntent().getIntExtra("position", 0) + "");
 
         pager.setAdapter(adapter);
         pager.setCurrentItem(getIntent().getIntExtra(
                 "position", 0), false);
 
-        tabs.setViewPager(pager);
-        tabs.setTypeface(
-                Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf"), 0);
-        tabs.setTextColor(getResources().getColor(android.R.color.white));
-        tabs.setIndicatorColor(getResources().getColor(android.R.color.white));
+        tabs.setupWithViewPager(pager);
 
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Log.d("Log", getIntent().getExtras() + "");
         currentPosition = getIntent().getIntExtra("position", 0);
-
-        Log("tab position = " + currentPosition);
 
         AdView adView = (AdView) this.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
-        Log("currentColor = " + currentColor);
         changeColor(currentColor);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Session.getActiveSession().onActivityResult(this, requestCode,
-                resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void onConfigurationChanged(Configuration config) {
@@ -228,7 +212,7 @@ public class CategoryActivity extends ActionBarActivity {
 
     @SuppressLint("NewApi")
     private void changeColor(int newColor) {
-        if (CommonUtilities.isLollipop()) {
+        if (Util.isLollipop()) {
             float[] hsv = new float[3];
             Color.colorToHSV(newColor, hsv);
             hsv[2] *= 0.8f; // value component

@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 
-    <com.moysof.hashtagnews.TextMedium
+    <com.moysof.hashtagnews.typeface.TextMedium
         android:id="@+id/hashtagTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
