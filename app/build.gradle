@@ -7,14 +7,16 @@ android {
         applicationId "com.moysof.hashtagnews"
         minSdkVersion 13
         targetSdkVersion 22
-        versionCode 34
-        versionName '3.0.01'
+        versionCode 35
+        versionName '3.1'
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
