@@ -1,24 +1,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/gray" >
+        android:background="@color/gray">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <!-- ———————————————————————————— -->
 
@@ -28,7 +32,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/orange_light_bg"
                     android:orientation="vertical"
-                    android:padding="8dp" >
+                    android:padding="8dp">
 
                     <com.moysof.hashtagnews.typeface.TextBold
                         android:id="@+id/TextView01"
@@ -44,7 +48,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp" >
+                        android:layout_marginTop="12dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:id="@+id/textView1"
@@ -79,7 +83,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="8dp" >
+                        android:layout_marginTop="8dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -108,7 +112,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/orange_light_bg"
                     android:orientation="vertical"
-                    android:padding="8dp" >
+                    android:padding="8dp">
 
                     <com.moysof.hashtagnews.typeface.TextBold
                         android:layout_width="wrap_content"
@@ -130,7 +134,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="8dp" >
+                        android:layout_marginTop="8dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -164,7 +168,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="8dp" >
+                        android:layout_marginTop="8dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -193,7 +197,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/orange_light_bg"
                     android:orientation="vertical"
-                    android:padding="8dp" >
+                    android:padding="8dp">
 
                     <com.moysof.hashtagnews.typeface.TextBold
                         android:layout_width="wrap_content"
@@ -208,7 +212,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp" >
+                        android:layout_marginTop="12dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:id="@+id/TextView03"
@@ -246,7 +250,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="8dp" >
+                        android:layout_marginTop="8dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -270,7 +274,7 @@
                             android:scrollHorizontally="true"
                             android:singleLine="true"
                             android:textColor="#fff"
-                            android:textSize="20sp" >
+                            android:textSize="20sp">
 
                             <requestFocus />
                         </com.moysof.hashtagnews.typeface.TextLightItalic>
@@ -289,7 +293,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
-                        android:layout_marginTop="8dp" >
+                        android:layout_marginTop="8dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -323,7 +327,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp" >
+                        android:layout_marginRight="12dp">
 
                         <com.moysof.hashtagnews.typeface.TextLight
                             android:layout_width="match_parent"
@@ -340,7 +344,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_weight="1">
 
                             <com.moysof.hashtagnews.typeface.TextLightItalic
                                 android:id="@+id/TextView04"
@@ -385,8 +389,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
