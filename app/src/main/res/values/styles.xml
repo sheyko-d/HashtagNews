@@ -10,4 +10,12 @@
 
     <style name="AppThemeNoActionBar.TransluentStatusBar" parent="AppBaseTheme" />
 
+    <style name="GoogleButton" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/btn_google</item>
+    </style>
+
+    <style name="FacebookButton" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/btn_facebook</item>
+    </style>
+
 </resources>

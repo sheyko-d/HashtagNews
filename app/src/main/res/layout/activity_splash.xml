@@ -25,13 +25,13 @@
         android:orientation="vertical">
 
         <Button
+            android:theme="@style/GoogleButton"
             android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="4dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/btn_google_selector"
             android:drawableLeft="@drawable/ic_btn_google"
             android:elevation="4dp"
             android:paddingLeft="12dp"
@@ -41,14 +41,14 @@
             android:textSize="16sp" />
 
         <Button
+            android:theme="@style/FacebookButton"
             android:id="@+id/login_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/btn_facebook_selector"
+            android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_btn_facebook"
             android:elevation="4dp"
             android:paddingLeft="12dp"
